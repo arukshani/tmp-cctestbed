@@ -1,0 +1,26 @@
+client:
+  ifname_local: enp6s0f1
+  ifname_remote: enp6s0f1
+  ip_lan: 192.0.0.4
+  ip_wan: 128.105.145.57
+  key_filename: /users/rukshani/.ssh/rukshani_cloudlab.pem
+  pci: '06:00.1'
+  username: rukshani
+experiments:
+  bbr1-1bw-35rtt-16q:
+    btlbw: 1
+    flows:
+    - ccalg: bbr
+      end_time: 60
+      kind: iperf
+      rtt: 35
+      start_time: 0
+    queue_size: 16
+server:
+  ifname_local: enp6s0f0
+  ifname_remote: enp6s0f0
+  ip_lan: 192.0.0.2
+  ip_wan: 128.105.145.54
+  key_filename: /users/rukshani/.ssh/rukshani_cloudlab.pem
+  pci: '06:00.0'
+  username: rukshani
